@@ -1,5 +1,13 @@
-.note
-{
+.im{
+    width:100%;
+    margin-top:150px;
+    height: 50%;
+}
+.form{
+  margin-top:30px;
+}
+
+.note{
     text-align: center;
     height: 70px;
     background: -webkit-linear-gradient(left, #ce2256, #fe3c47);
@@ -31,7 +39,22 @@
     color: #fff;
 
 }
-#comment{
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.title1{
+    text-align:center;
+    margin-top: 90px; 
+    font-size: 35px;
+   
+}
+.title2{
+    text-align:center;
+   
+}
+#im{
+    margin-left: 20px;
+    margin-top: 20px;
+
+
+}
+span{
+    color: #fe3c47;
   }
