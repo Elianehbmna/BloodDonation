@@ -1,0 +1,108 @@
+.navbar{
+    /* background-color: white; */
+    background-color: #FE3C47;
+    height: 50px;
+}
+.navigation{
+    width:100%;
+    height:auto;
+    margin:auto;
+  }
+  .nav{
+    margin:0px;
+    padding:0px;
+    margin-top:2px;
+    text-align:center;
+  }
+  .navigation >ul{
+    text-align:right;
+    margin-left:30%;
+  }
+  li{
+      margin-top:2%; 
+      float: right;
+  }
+  .navigation ul li{
+    display:inline-block;
+    
+    width:15px;
+    height:19px;
+    margin:0px 10px;
+    background:white;
+    border-radius:0%;
+
+  }
+  .navigation ul li a{
+    font-size:15px;
+    color:gray;
+    text-align: center;
+   
+  }
+  .navigation ul li a i{
+    line-height:20px 
+  }
+  #nav{
+    max-width:960px;
+    margin:0 auto;
+    padding:10px 0;
+    margin-right:0%;
+    
+  }
+  #nav>ul{
+    text-align:right;
+  }
+  #nav>ul>li {
+    display:inline-block;
+  }
+  #nav ul li a {
+    padding:17px;
+    margin-right:0;
+    text-transform:uppercase;
+    text-decoration:none;
+    display:block;
+    color:black;
+  }
+  #nav> ul> li> a:hover{
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    background:rgba(255,255,255,0.678);
+    color:rgb(0,35,122);
+  }
+ 
+  img{
+    /* margin-right: 100%; */
+      /* height: 130px;
+      width:auto; */
+      float:left;
+  }
+  .one-blood{
+      /* background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('https://res.cloudinary.com/drrezzrvd/image/upload/v1565097776/preview_d1wcrq.jpg'); */
+      background-image: url('https://res.cloudinary.com/drrezzrvd/image/upload/v1565097776/preview_d1wcrq.jpg');
+      opacity: 0.7;
+      padding-top: 4%;
+      background-repeat: no-repeat;
+      height: 600px;
+      width:auto;
+      background-size: cover;
+  }
+  #volunters{
+      /* text-align:center; */
+      font-family:sans-serif;
+      font-size:18px;
+      margin-left:10%
+  }
+  .btn{
+      background-color: #FE3C47;
+      font-family:sans-serif;
+      height: 40px;
+      font-size:18px;
+      margin-top:3px;
+      color:white;
+  }
+  h2{
+      text-align: center;
+      font-size:30px;
+      font-family: sans-serif;
+      margin-right: 50px;
+      margin-left:10px;
+      
+  }
