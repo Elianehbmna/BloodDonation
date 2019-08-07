@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+/* <<<<<<< HEAD
+<<<<<<< HEAD */
 .navbar{
     /* background-color: white; */
     background-color: #FE3C47;
@@ -115,9 +116,8 @@
   .col-md-3{
       box-shadow:4px 3px 10px rgba(0,0,0,0.3); 
       justify-content: space-between;
-
-=======
-.im{
+  }
+.img{
     width:100%;
     margin-top:150px;
     height: 50%;
@@ -183,5 +183,79 @@
 }
 span{
     color: #fe3c47;
->>>>>>> d47c4376b1392b561ce928aa50d3b76c29f636d7
+
   }
+
+
+/* navigation of footer */
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 0;
+    margin-right: 0%;
+    display: flex;
+    list-style: none;
+}
+nav>ul{
+    text-align:center;
+    list-style: none;
+    display: flex;
+  }
+  nav>ul>li>a {
+  padding: 18px;
+  margin-right: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(255, 251, 253);
+  display: inline-block;
+  transition-delay: 300ms;
+  list-style: none;
+  }
+  nav>ul>li>a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: brown;
+  color: rgba(0, 35, 122, 0.7);
+  list-style: none;
+  }
+  body{
+      background-color: black;
+      color: red;
+    position: fixed;
+    bottom: 400px;
+    top: 0;
+    padding-top: 20px;
+    width: 60%;
+    margin-bottom: 100%;
+    margin-left: 40px;
+    height: 10px;
+    text-shadow: 1px 1px black;
+    text-decoration: none;
+    text-decoration-style: none;
+    
+}
+/* heading of footer */
+footer h1{
+    margin-left: 80px;
+    font-size: 17px;
+}
+/* stylings for the contacts*/
+.monday{
+    list-style: none;   
+    margin-top: 15%;
+}
+.tuesday{
+    list-style: none; 
+    margin-left: 100px;  
+    margin-top: 30%;
+}
+p1{
+    font-size: 30px;
+    margin-top: 15%;
+    margin-left: 80px;
+}
+p2{
+    font-size: 20px;
+    bottom: 30%;
+    margin-left: 150px;
+}
