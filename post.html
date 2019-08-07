@@ -4,67 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <title>Blood+</title>
+    <title>OneBlood</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <style> 
-   .modal-content{
-            background-color:rgb(209, 100, 100);
-            
-		}
-		.btn-link{
-			color:white;
-		}
-		.modal-heading h2{
-			color:#ffffff;
-        }
-        .modal-dialog{
-            margin-top: 30px;
-        }
-    </style>
 </head>
 <body>
-        <br><br><br><br><br><br><br><div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-heading">
-                        <h2 class="text-center">Login</h2>
-                    </div>
-                    <hr />
-                    <div class="modal-body">
-                        <form action="" role="form">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="User Name" />
+        <form>
+                <div class="container register-form">
+                  <div class="form">
+                      <div class="note">
+                          <p>REQUEST APPOINTMENT</p>
+                      </div>
+            
+                      <div class="form-content">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" placeholder="title *" value=""/>
+                                  </div>
+                                  <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="center *" value=""/>
+                                    </div>
+                              </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input  type="file"  name="image" lass="form-control" placeholder="image *" value=""/>
                                 </div>
+                                
                             </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-lock"></span>
-                                    </span>
-                                    <input type="password" class="form-control" placeholder="Password" />
-        
-                                </div>
-        
-                            </div>
-        
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn btn-success btn-lg">Login</button>
-                                <a href="#" class="btn btn-link">forget Password</a>
-                            </div>
-        
-                        </form>
-                    </div>
-                </div>
-            </div>
-        
-    <script
-    src="java/jquery-3.4.1.js"></script>
-      <script src="java/script.js"></script>
-</body>
+                             
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                <textarea rows="4" cols="54" id="comment"  class="form-control" placeholder="Description..."></textarea>
+                                  </div>
+                                  <button type="button" class="btnSubmit">Post</button>
+                          </div>
+                        
+                      </div>
+                  </div>
+              </div>
+               </form>
+               <script
+               src="java/jquery-3.4.1.js"></script>
+                 <script src="java/script.js"></script> 
 </body>
 </html>
