@@ -1,0 +1,58 @@
+<?php
+include "login.php";
+
+if(isset($_POST['add'])){
+    
+  
+  $name = mysqli_real_escape_string($con, $_POST['name']);
+  $phone = mysqli_real_escape_string($con, $_POST['phone']);
+  $address = mysqli_real_escape_string($con, $_POST['address']);
+   $track = mysqli_real_escape_string($con, $_POST['track']);
+    $shelf = mysqli_real_escape_string($con, $_POST['shelf']);
+  $date=date("F j,Y");
+  
+
+  $insert_c = "insert into packages (customer_name,customer_contact,customer_address,date,track,shelf) values (?,?,?,?,?,?)";
+   $statement= mysqli_stmt_init($con);
+if (!mysqli_stmt_prepare($statement,$insert_c)) {
+      # code...
+    echo "oops something went wrong!";
+  }else{
+    mysqli_stmt_bind_param($statement,"ssssss", $name, $phone, $address, $date, $track, $shelf);
+   $run_c = mysqli_stmt_execute($statement);
+  
+  if($run_c){
+   //echo "Success!";
+
+  // Authorisation details.
+  $username = "knyamuniga16@gmail.com";
+  $hash = "a00f1846f9c2adc21d38deffa536c321af4545d3b2abe98bdb9e394e6895bb49";
+
+  // Config variables. Consult http://api.txtlocal.com/docs for more info.
+  $test = "0";
+
+  // Data for text message. This is the text message data.
+  $sender = "IPOSITA"; // This is who the message appears to be from.
+  $numbers = $phone; // A single number or a comma-seperated list of numbers
+  $message = "Hello ".$name.",IPOSITA would like to inform you that your parcel with tracking id ".$track." has arrived.please report to our headquarter.
+                     
+  ";
+  // 612 chars or less
+  // A single number or a comma-seperated list of numbers
+  $message = urlencode($message);
+  $data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
+  $ch = curl_init('http://api.txtlocal.com/send/?');
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $result = curl_exec($ch); // This is the result from the API
+  curl_close($ch);
+  echo $result;
+  echo "<script>window.open('admin/index.php','_self')</script>"; 
+  }
+
+
+}
+}
+
+?>
