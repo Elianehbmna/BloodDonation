@@ -1,7 +1,7 @@
 <?php
-$con = mysqli_connect("localhost","root","","iposita");
+$con = mysqli_connect("localhost","root","","bloodbank");
 function selectAll(){
- $get = "select * from packages";
+ $get = "select * from posts";
  global $con;
    $statement= mysqli_stmt_init($con);
 if (!mysqli_stmt_prepare($statement,$get)) {
@@ -15,38 +15,47 @@ if (!mysqli_stmt_prepare($statement,$get)) {
  while ( $row = mysqli_fetch_array($run)) {
   	# code...
 $id=$row['id'];
-$name = $row['customer_name'];
-$contact = $row['customer_contact'];
-$address = $row['customer_address'];
-$date = $row['date'];
-$track = $row['track'];
-$shelf = $row['shelf'];
-$received=$row['received'];
-$receivedat=$row['receivedat'];
+$title=$row['title'];
+$center=$row['center'];
+// $image = $row['image'];
+$Description = $row['Descriptiond'];
+
 ?>
-<tr>
-    <td><?php echo $name; ?></td>
-    <td><?php echo $contact; ?></td>
-    <td><?php echo $address; ?></td>
-    <td><?php echo $date; ?></td>
-    <td><?php echo $track; ?></td>
-    <td><?php echo $shelf; ?></td>
-    <?php if($received == 0){?>
-    <td><button type="button"   class="btn btn-xs btn-danger btn_confirm"><a href="confirm.php?id=<?php echo $id;?>" style="text-decoration: none;color: white;">confirm</a></button></td> 
-    <?php }else if($received == 1) {?>
-<td><button type="button" class="btn btn-xs btn-success btn_delete">received</button></td> 
+<div class=col-md-4>
+<div class="card">
+    <div class="view overlay">
+      <img class="card-img-top" src="images/blood2.jpg" alt="Card image cap" id="im">
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
   
+    <!-- Card content -->
+    <div class="card-body">
+  
+      <!-- Social shares button -->
+      <a class="activator waves-effect waves-light mr-4"><i class="fas fa-share-alt"></i></a>
+      <!-- Title -->
+      <h4 class="card-title"><?php echo $title ?></h4>
+      <h4 class="card-title"> <?php echo $center ?></h4>
+     
+      <!-- Text -->
+      <p class="card-text"><?php echo $Description ?></p>
+      <!-- Link 
+      <a href="#!" class="black-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>-->
+  
+    </div>
+  </div>
+</div>
 <?php 
     }
 ?>
- <td><?php echo $receivedat; ?></td>
-  </tr>
 <?php
   }
 
 
 }
-}
+
 
 
 ?>
